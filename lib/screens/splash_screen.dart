@@ -14,7 +14,7 @@ class _SplashScreenState extends State<SplashScreen> {
     Future.delayed(
       const Duration(seconds: 3),
       () {
-        Navigator.of(context).push(
+        Navigator.of(context).pushReplacement(
           MaterialPageRoute(
             builder: (context) => const ProductsScreen(),
           ),
@@ -35,7 +35,7 @@ class _SplashScreenState extends State<SplashScreen> {
       body: Container(
         padding: const EdgeInsets.all(20.0),
         decoration: BoxDecoration(
-          color: Colors.amber[800],
+          color: Colors.green[600],
         ),
         child: Center(
           child: Column(
