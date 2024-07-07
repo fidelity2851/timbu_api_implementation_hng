@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:timbu_api_implementation_hng/screens/product_details_screen.dart';
 
 class ProductsScreen extends StatefulWidget {
   const ProductsScreen({super.key});
@@ -22,44 +23,62 @@ class _ProductsScreenState extends State<ProductsScreen> {
         ),
         backgroundColor: Colors.green[600],
       ),
-      body: Padding(
+      body: GridView.count(
+        crossAxisCount: 2,
+        mainAxisSpacing: 20.0,
+        crossAxisSpacing: 20.0,
+        childAspectRatio: 0.8,
         padding: const EdgeInsets.all(20.0),
-        child: GridView.count(
-          crossAxisCount: 2,
-          mainAxisSpacing: 20.0,
-          crossAxisSpacing: 20.0,
-          childAspectRatio: 0.8,
-          children: List.generate(100, (index) {
-            return Container(
+        children: List.generate(100, (index) {
+          return GestureDetector(
+            onTap: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) => const ProductDetailsScreen(),
+                ),
+              );
+            },
+            child: Container(
               padding: const EdgeInsets.only(top: 10),
               decoration: BoxDecoration(
+                color: Colors.grey.shade200,
                 border: Border.all(
-                  color: Colors.grey.shade200,
+                  color: Colors.grey.shade400,
                 ),
                 borderRadius: BorderRadius.circular(10.0),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.grey.withOpacity(0.3),
+                    spreadRadius: 1,
+                    blurRadius: 10,
+                  ),
+                ],
               ),
               child: Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const Image(
-                    image: NetworkImage(
-                        'https://m.media-amazon.com/images/I/41GK+ItincL._AC_SX679_.jpg'),
-                    width: 100.0,
+                  const Center(
+                    child: Image(
+                      image: NetworkImage(
+                          'https://m.media-amazon.com/images/I/41GK+ItincL._AC_SX679_.jpg'),
+                      height: 120.0,
+                    ),
                   ),
+                  const SizedBox(height: 8),
                   Container(
-                    padding: const EdgeInsets.all(10.0),
+                    padding: const EdgeInsets.symmetric(horizontal: 10.0),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          'Products name 1',
+                          'Products name 1 already',
                           style: GoogleFonts.poppins(
                             color: Colors.black,
-                            fontSize: 20.0,
+                            fontSize: 18.0,
                             fontWeight: FontWeight.w500,
                           ),
                         ),
-                        const SizedBox(height: 10),
+                        const SizedBox(height: 5),
                         Text(
                           '\$300',
                           style: GoogleFonts.poppins(
@@ -73,9 +92,9 @@ class _ProductsScreenState extends State<ProductsScreen> {
                   )
                 ],
               ),
-            );
-          }),
-        ),
+            ),
+          );
+        }),
       ),
     );
   }
