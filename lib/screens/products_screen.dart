@@ -29,7 +29,7 @@ class _ProductsScreenState extends State<ProductsScreen> {
         crossAxisSpacing: 20.0,
         childAspectRatio: 0.8,
         padding: const EdgeInsets.all(20.0),
-        children: List.generate(100, (index) {
+        children: List.generate(20, (index) {
           return GestureDetector(
             onTap: () {
               Navigator.of(context).push(
@@ -41,16 +41,16 @@ class _ProductsScreenState extends State<ProductsScreen> {
             child: Container(
               padding: const EdgeInsets.only(top: 10),
               decoration: BoxDecoration(
-                color: Colors.grey.shade200,
+                color: Colors.grey.shade100,
                 border: Border.all(
-                  color: Colors.grey.shade400,
+                  color: Colors.grey.shade300,
                 ),
                 borderRadius: BorderRadius.circular(10.0),
                 boxShadow: [
                   BoxShadow(
                     color: Colors.grey.withOpacity(0.3),
                     spreadRadius: 1,
-                    blurRadius: 10,
+                    blurRadius: 5,
                   ),
                 ],
               ),
