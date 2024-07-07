@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:timbu_api_implementation_hng/screens/product_details_screen.dart';
+import 'package:timbu_api_implementation_hng/viewmodel/products_controller.dart';
 
 class ProductsScreen extends StatefulWidget {
   const ProductsScreen({super.key});
@@ -10,6 +11,8 @@ class ProductsScreen extends StatefulWidget {
 }
 
 class _ProductsScreenState extends State<ProductsScreen> {
+  final products = ProductController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,7 +32,7 @@ class _ProductsScreenState extends State<ProductsScreen> {
         crossAxisSpacing: 20.0,
         childAspectRatio: 0.8,
         padding: const EdgeInsets.all(20.0),
-        children: List.generate(20, (index) {
+        children: List.generate(products.getProducts().length, (index) {
           return GestureDetector(
             onTap: () {
               Navigator.of(context).push(
