@@ -40,7 +40,7 @@ class ProductsScreen extends ConsumerWidget {
                     crossAxisCount: 2,
                     mainAxisSpacing: 20.0,
                     crossAxisSpacing: 20.0,
-                    childAspectRatio: 0.8,
+                    childAspectRatio: 0.7,
                     padding: const EdgeInsets.all(20.0),
                     children: List.generate(data.length, (index) {
                       return GestureDetector(
@@ -94,7 +94,7 @@ class ProductsScreen extends ConsumerWidget {
                                       data[index].name,
                                       style: GoogleFonts.poppins(
                                         color: Colors.black,
-                                        fontSize: 18.0,
+                                        fontSize: 16.0,
                                         fontWeight: FontWeight.w500,
                                       ),
                                     ),
