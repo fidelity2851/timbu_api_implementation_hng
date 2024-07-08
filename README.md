@@ -1,16 +1,51 @@
-# timbu_api_implementation_hng
+# Timbu API Integration App
 
-A new Flutter project.
+This Flutter application is designed to integrate with the Timbu API to retrieve and display product information. The app adheres to the MVVM architecture pattern and showcases a list of products with their images and relevant details.
 
-## Getting Started
+## Features
 
-This project is a starting point for a Flutter application.
+- Fetches product data from the Timbu API.
+- Displays a list of products with images, names, descriptions, and available quantities.
+- Implements proper mobile architecture with state management.
+- Ensures a user-friendly and intuitive UI.
 
-A few resources to get you started if this is your first Flutter project:
+## Screenshots
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### Splash Screen
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![Splash Screen](./assets/screen1.png)
+
+### Products Screen
+
+![Product Screen](./assets/screen2.png)
+
+### Product Details Screen
+
+![Product Details Screen](./assets/screen3.png)
+
+## Setup Instructions
+
+### Prerequisites
+
+- Flutter SDK: [Installation Guide](https://flutter.dev/docs/get-started/install)
+- Timbu API account: [Sign up here](https://timbu.cloud)
+
+### Project Setup
+
+1. **Clone the repository**
+
+   git clone https://github.com/fidelity2851/timbu_api_implementation_hng.git
+
+   cd timbu_api_implementation_hng
+
+   flutter pub get
+
+   flutter run
+
+### Demo
+
+A virtualized demonstration of the app is available on [Appetize.io](https://appetize.io/app/b_ifa3boeyf2mqwapnxnuwobpxjm)
+
+### License
+
+Distributed under the MIT License.
