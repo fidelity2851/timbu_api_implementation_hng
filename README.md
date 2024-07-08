@@ -34,7 +34,7 @@ This Flutter application is designed to integrate with the Timbu API to retrieve
 
 1. **Clone the repository**
 
-   git clone https://github.com/fidelity2851/timbu_api_implementation_hng.git
+   git clone <https://github.com/fidelity2851/timbu_api_implementation_hng.git>
 
    cd timbu_api_implementation_hng
 
