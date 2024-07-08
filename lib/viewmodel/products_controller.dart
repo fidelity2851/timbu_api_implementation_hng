@@ -5,17 +5,15 @@ import 'package:timbu_api_implementation_hng/models/product.dart';
 import 'package:http/http.dart' as http;
 
 class ProductController {
-  List _products = [];
+  final String orgId = '328f3079aa0a41d69ebf6b45fd0a0963';
+  final String appId = '0V4LP27NSFRQSS3';
+  final String apiKey = 'ad798766142f4427ae0ae31ab757929f20240705135733718036';
 
   ProductController();
 
-  getProducts() {
-    return _products;
-  }
-
   Future<List<Product>> fetchProducts() async {
-    const url =
-        'https://api.timbu.cloud/products?organization_id=328f3079aa0a41d69ebf6b45fd0a0963&Appid=0V4LP27NSFRQSS3&Apikey=ad798766142f4427ae0ae31ab757929f20240705135733718036';
+    final url =
+        'https://api.timbu.cloud/products?organization_id=$orgId&Appid=$appId&Apikey=$apiKey';
     final response = await http.get(Uri.parse(url));
 
     if (response.statusCode == 200) {
